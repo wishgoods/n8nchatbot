@@ -9,6 +9,12 @@ app.use(express.json());
 
 const n8nWebhook = "https://wishgoods.app.n8n.cloud/webhook/30d53feb-9b53-4ce1-8d55-ff44eb12b108/chat";
 
+app.get('/health', async (req, res) => {
+  
+    res.json({ message:"healthy" });
+
+});
+
 app.post('/chat', async (req, res) => {
   console.log("Incoming request body:", req.body);
 
