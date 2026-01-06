@@ -1,10 +1,8 @@
-// server.js
 const express = require('express');
-const fetch = require('node-fetch'); // אם Node <18, אחרת fetch מובנה
 const cors = require('cors');
 
 const app = express();
-app.use(cors()); // מאפשר גישה מהדפדפן
+app.use(cors());
 app.use(express.json());
 
 const n8nWebhook = "https://wishgoods.app.n8n.cloud/webhook/30d53feb-9b53-4ce1-8d55-ff44eb12b108/chat";
